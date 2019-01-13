@@ -1,0 +1,25 @@
+name: PMLogin
+api: ["3.5.4"]
+main: mydeacy\pmlogin\PMLogin
+version: 1.0.1
+author: MyDeacy
+description: "プラグインのデータフォルダを使用しないログインシステム"
+commands:
+  login:
+    description: "ログインを行うコマンドです"
+    usage: "/login {パスワード}"
+    permission: pmlogin.login
+  del:
+    description: "ログインデータを削除します"
+    usage: "/del {プレイヤー名}"
+    permission: pmlogin.del
+permissions:
+  pmlogin.*:
+    default: op
+    children:
+      pmlogin.login:
+        default: true
+
+
+
+
